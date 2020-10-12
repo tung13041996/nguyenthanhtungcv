@@ -1,0 +1,1241 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    nav{
+        width: 100%;
+        height: 50px;
+        background: $gray-cl;
+        @include midflex();
+        .container{
+            padding: 0;
+        }
+        .inner{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .logo{
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                i{  
+                    width: 100%;
+                    height: 100%;
+                    @include midflex();
+                    img{
+                        max-width: 100%;
+                        width: 30px;
+                        height: auto;
+                    }
+                }
+            }
+            
+            h1{
+                @include text(35px, PR1, normal, $black-cl, uppercase);
+            }
+            .download{
+                @include midflex();
+                cursor: pointer;
+                img{
+                    max-width: 100%;
+                    width: 20px;
+                    height: auto;
+                }
+            }
+        }
+        @include mobile{
+            .inner{
+                .logo{
+                    i{
+                        img{
+                            width: 25px;
+                        }
+                    }
+                }
+                h1{
+                    font-size: 20px;
+                }
+                .download{
+                    img{
+                        width: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    main{
+        padding-top: 50px;
+        padding-bottom: 25px;
+        width: 100%;
+        background: $lgray-cl;
+        .container{
+            background: $white-cl;
+            padding: 0;
+            overflow: hidden;
+            .left{
+                background:$bgl-cl;
+                margin-top: 360px;
+                padding-top: 40px;
+                height: 100%;
+                .skill{
+                    padding-left: 10px;
+                    padding-right: 15px;
+                    margin-bottom: 35px;
+                    &__title{
+                        margin-bottom: 20px;
+                        display: flex;
+                        i{
+                            @include midflex();
+                            img{
+                                max-width: 100%;
+                                width: 25px;
+                                height: auto;
+                            }
+                        }
+                        h2{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            padding-left: 10px;
+                            position: relative;
+                            @include text($fz-title, PR1, normal, $tt-cl, uppercase);
+                            &:after{
+                                display: block;
+                                content: "";
+                                width: calc(100% - 10px);
+                                height: 2px;
+                                background: $line-cl;
+                                position: absolute;
+                                bottom: 0;
+                            }
+                        }
+                    }
+                    &__content{
+                        padding-left: 20px;
+                        display: grid;
+                        grid-template-columns: repeat(3, 1fr);
+                        grid-auto-rows: 80px;
+                        grid-gap: 10px;
+                        .pic-html{
+                            grid-column-start: 1;
+                            grid-column-end: 2;
+                            grid-row-start: 1;
+                            grid-row-end: 2;
+                            overflow: hidden;
+                            background: $white-cl;
+                            border-radius: 10px;
+                            @include midflex();
+                            img{
+                                max-width: 100%;
+                                width: 60px;
+                                height: auto;
+                            }
+                        }
+                        .pic-css{
+                            grid-column-start: 2;
+                            grid-column-end: 3;
+                            grid-row-start: 1;
+                            grid-row-end: 2;
+                            overflow: hidden;
+                            background: $white-cl;
+                            border-radius: 10px;
+                            @include midflex();
+                            img{
+                                max-width: 100%;
+                                width: 45px;
+                                height: auto;
+                            }
+                        }
+                        .pic-js{
+                            grid-column-start: 3;
+                            grid-column-end: 4;
+                            grid-row-start: 1;
+                            grid-row-end: 2;
+                            overflow: hidden;
+                            background: $white-cl;
+                            border-radius: 10px;
+                            @include midflex();
+                            img{
+                                max-width: 100%;
+                                width: 45px;
+                                height: auto;
+                            }
+                        }
+                        .pic-jquery{
+                            grid-column-start: 1;
+                            grid-column-end: 2;
+                            grid-row-start: 2;
+                            grid-row-end: 3;
+                            overflow: hidden;
+                            background: $white-cl;
+                            border-radius: 10px;
+                            @include midflex();
+                            img{
+                                max-width: 100%;
+                                width: 60px;
+                                height: auto;
+                            }
+                        }
+                        .pic-bs{
+                            grid-column-start: 2;
+                            grid-column-end: 3;
+                            grid-row-start: 2;
+                            grid-row-end: 3;
+                            overflow: hidden;
+                            background: $white-cl;
+                            border-radius: 10px;
+                            @include midflex();
+                            img{
+                                max-width: 100%;
+                                width: 65px;
+                                height: auto;
+                            }
+                        }
+                        .pic-pts{
+                            grid-column-start: 3;
+                            grid-column-end: 4;
+                            grid-row-start: 2;
+                            grid-row-end: 3;
+                            overflow: hidden;
+                            background: $white-cl;
+                            border-radius: 10px;
+                            @include midflex();
+                            img{
+                                max-width: 100%;
+                                width: 65px;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+
+                .project{
+                    padding-left: 10px;
+                    padding-right: 15px;
+                    margin-bottom: 35px;
+                    &__title{
+                        margin-bottom: 20px;
+                        display: flex;
+                        i{
+                            @include midflex();
+                            img{
+                                max-width: 100%;
+                                width: 25px;
+                                height: auto;
+                            }
+                        }
+                        h2{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            padding-left: 10px;
+                            position: relative;
+                            @include text($fz-title, PR1, normal, $tt-cl, uppercase);
+                            &:after{
+                                display: block;
+                                content: "";
+                                width: calc(100% - 10px);
+                                height: 2px;
+                                background: $line-cl;
+                                position: absolute;
+                                bottom: 0;
+                            }
+                        }
+                    }
+                    &__content{
+                        padding-left: 20px;
+                        .gpl{
+                            .col-md-4{
+                                @include midflex();
+                                padding-left: 0;
+                            }
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            margin-bottom: 20px;
+                            h5{
+                                text-align: center;
+                                @include text($fz-main, PR1, normal, $tt-cl, uppercase);
+                            }
+                            &__img{
+                                width: 100%;
+                                height: 150px;
+                                border-radius: 10px;
+                                overflow: hidden;
+                                img{
+                                    max-width: 100%;
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: cover;
+                                    border-radius: 10px;
+                                    cursor: pointer;
+                                    -webkit-filter: brightness(71%);
+                                    transition: 0.5s;
+                                    &:hover{
+                                        transform: scale(1.1);
+                                        -webkit-filter: brightness(100%);
+                                        transition: 0.5s;
+                                    }
+                                }
+                            }
+    
+                        }                          
+                    }
+                }
+
+                .certificate{
+                    padding-left: 10px;
+                    padding-right: 15px;
+                    margin-bottom: 25px;
+                    &__title{
+                        margin-bottom: 20px;
+                        display: flex;
+                        i{
+                            @include midflex();
+                            img{
+                                max-width: 100%;
+                                width: 25px;
+                                height: auto;
+                            }
+                        }
+                        h2{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            padding-left: 10px;
+                            position: relative;
+                            @include text($fz-title, PR1, normal, $tt-cl, uppercase);
+                            &:after{
+                                display: block;
+                                content: "";
+                                width: calc(100% - 10px);
+                                height: 2px;
+                                background: $line-cl;
+                                position: absolute;
+                                bottom: 0;
+                            }
+                        }
+                    }
+                    &__content{
+                        padding-left: 20px;
+                        h3{
+                            margin-bottom: 15px;
+                            @include text(18px, PR1, normal, $tt-cl, uppercase);
+                        }
+                        p{
+                            padding-left: 10px;
+                            display: flex;
+                            @include text($fz-main, PR2, 30px, $black-cl, none);
+                            img{
+                                margin-top: 5px;
+                                margin-left: 0;
+                                margin-right: 5px;
+                                width: 15px;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+
+                .interest{
+                    padding-left: 10px;
+                    padding-right: 15px;
+                    margin-bottom: 35px;
+                    &__title{
+                        margin-bottom: 20px;
+                        display: flex;
+                        i{
+                            @include midflex();
+                            img{
+                                max-width: 100%;
+                                width: 25px;
+                                height: auto;
+                            }
+                        }
+                        h2{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            padding-left: 10px;
+                            position: relative;
+                            @include text($fz-title, PR1, normal, $tt-cl, uppercase);
+                            &:after{
+                                display: block;
+                                content: "";
+                                width: calc(100% - 10px);
+                                height: 2px;
+                                background: $line-cl;
+                                position: absolute;
+                                bottom: 0;
+                            }
+                        }
+                    }
+                    &__content{
+                        padding-left: 25px;
+                        display: flex;
+                        justify-content: space-between;
+                        .hobby{
+                            width: 32%;
+                            @include midflex();
+                            flex-direction: column;
+                            .image{
+                                img{
+                                    max-width: 100%;
+                                    width: 40px;
+                                    height: auto;
+                                }
+                            }
+                            p{
+                                margin-top: 5px;
+                                @include text($fz-main, PR2, normal, $black-cl, uppercase)
+                            }
+                        }
+                    }
+                }
+            }
+
+            .right{
+                padding-right: 15px;
+                .background{
+                    position: relative;
+                    img{
+                        max-width: 100%;
+                        width: 360px;
+                        height: auto;
+                        position: absolute;
+                        top: -80px;
+                        left: -390px;
+                    }
+                }
+                .name-pos{
+                    width: 100%;
+                    margin-top: 80px;
+                    margin-bottom: 30px;
+                    @include midflex();
+                    flex-direction: column;
+                    .name{
+                        margin-bottom: 20px;
+                        h2{
+                            letter-spacing: 3px;
+                            font-weight: 700;
+                            @include text($fz-name, PR2, normal, $black-cl, uppercase);
+                        }
+                    }
+                    .position{
+                        h3{
+                            font-weight: 700;
+                            letter-spacing: 3px;
+                            @include text($fz-pos, CT, normal, $black-cl, uppercase);
+                        }
+                    }
+                    &:after{
+                        display: block;
+                        content: "";
+                        width: 100%;
+                        height: 2px;
+                        background: $line-cl;
+                        margin-top: 30px;
+                    }
+                }
+    
+                .information{
+                    margin-bottom: 30px;
+                    .contact{
+                        margin-left: 50px;
+                        li{
+                            margin: 10px 0;
+                            display: flex;
+                            i{
+                                padding-right: 10px;
+                                img{
+                                    max-width: 100%;
+                                    width: 20px;
+                                    height: auto;   
+                                }
+                            }
+                            p{
+                                a{
+                                    padding-left: 5px;
+                                }
+                                display: flex;
+                                @include text($fz-main, PR2, normal, $black-cl, none);
+                            }
+                        }
+                    }
+                }
+    
+                .about{
+                    margin-bottom: 15px;
+                    &__title{
+                        margin-bottom: 20px;
+                        display: flex;
+                        i{
+                            @include midflex();
+                            img{
+                                max-width: 100%;
+                                width: 25px;
+                                height: auto;
+                            }
+                        }
+                        h2{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            padding-left: 10px;
+                            position: relative;
+                            @include text($fz-title, PR1, normal, $tt-cl, uppercase);
+                            &:after{
+                                display: block;
+                                content: "";
+                                width: calc(100% - 10px);
+                                height: 2px;
+                                background: $line-cl;
+                                position: absolute;
+                                bottom: 0;
+                            }
+                        }
+                    }
+                    &__content{
+                        padding-left: 50px;
+                        ul{
+                            li{
+                                display: flex;
+                                text-align: justify;
+                                @include text($fz-main, PR2, 30px, $black-cl, none);
+                                img{
+                                    margin-top: 5px;
+                                    margin-left: 0;
+                                    margin-right: 5px;
+                                    width: 15px;
+                                    height: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .education{
+                    margin-bottom: 15px;
+                    &__title{
+                        margin-bottom: 20px;
+                        display: flex;
+                        i{
+                            @include midflex();
+                            img{
+                                max-width: 100%;
+                                width: 25px;
+                                height: auto;
+                            }
+                        }
+                        h2{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            padding-left: 10px;
+                            position: relative;
+                            @include text($fz-title, PR1, normal, $tt-cl, uppercase);
+                            &:after{
+                                display: block;
+                                content: "";
+                                width: calc(100% - 10px);
+                                height: 2px;
+                                background: $line-cl;
+                                position: absolute;
+                                bottom: 0;
+                            }
+                        }
+                    }
+                    &__content{
+                        padding-left: 50px;
+                        .school{
+                            margin-bottom: 10px;
+                            position: relative;
+                            h4{
+                                @include text(18px, PR1, normal, $tt-cl, uppercase);
+                            }
+                            p{
+                                display: flex;
+                                text-align: justify;
+                                @include text($fz-main, PR2, 30px, $black-cl, none);
+                                img{
+                                    margin-top: 5px;
+                                    margin-left: 0;
+                                    margin-right: 5px;
+                                    width: 15px;
+                                    height: auto;
+                                }
+                            }
+                            &:before{
+                                display: block;
+                                content: "";
+                                width: 3px;
+                                height: 105px;
+                                background: $lgray-cl;
+                                position: absolute;
+                                left: -15px;
+                            }
+                        }
+                    }
+                }
+    
+                .experience{
+                    margin-bottom: 15px;
+                    &__title{
+                        display: flex;
+                        margin-bottom: 20px;
+                        i{
+                            @include midflex();
+                            img{
+                                max-width: 100%;
+                                width: 22px;
+                                height: auto;
+                            }
+                        }
+                        h2{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            padding-left: 10px;
+                            position: relative;
+                            @include text($fz-title, PR1, normal, $tt-cl, uppercase);
+                            &:after{
+                                display: block;
+                                content: "";
+                                width: calc(100% - 10px);
+                                height: 2px;
+                                background: $line-cl;
+                                position: absolute;
+                                bottom: 0;
+                            }
+                        }
+                    }
+                    &__content{
+                        padding-left: 50px;
+                        &--left{
+                            h5{
+                                @include text(18px, PR1, normal, $tt-cl, uppercase);
+                            }
+                            p{
+                                display: flex;
+                                @include text($fz-main, PR2, 30px, $black-cl, none);
+                                span{
+                                    padding-left: 5px;
+                                    font-weight: 700;
+                                }
+                                a{
+                                    margin-left: 2px;
+                                }
+                            }
+                            .content{
+                                padding-left: 10px;
+                                ul{
+                                    li{
+                                        text-align: justify;
+                                        display: flex;
+                                        @include text($fz-main, PR2, 30px, $black-cl, none);
+                                        img{
+                                            margin-top: 3px;
+                                            margin-left: 0;
+                                            margin-right: 5px;
+                                            width: 15px;
+                                            height: auto;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+    
+                        &--right{
+                            width: 100%;
+                            height: 100%;
+                            border-radius: 10px;
+                            overflow: hidden;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 10px;
+                                object-fit: cover;
+                                cursor: pointer;
+                                -webkit-filter: brightness(71%);
+                                transition: 0.5s;
+                                &:hover{
+                                    transform: scale(1.1);
+                                    transition: 0.5s;
+                                    -webkit-filter: brightness(100%);
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                .activity{
+                    margin-bottom: 25px;
+                    &__title{
+                        display: flex;
+                        margin-bottom: 20px;
+                        i{
+                            @include midflex();
+                            img{
+                                max-width: 100%;
+                                width: 22px;
+                                height: auto;
+                            }
+                        }
+                        h2{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            padding-left: 10px;
+                            position: relative;
+                            @include text($fz-title, PR1, normal, $tt-cl, uppercase);
+                            &:after{
+                                display: block;
+                                content: "";
+                                width: calc(100% - 10px);
+                                height: 2px;
+                                background: $line-cl;
+                                position: absolute;
+                                bottom: 0;
+                            }
+                        }
+                    }
+                    &__content{
+                        padding-left: 50px;
+                        .detail{
+                            h5{
+                                @include text(18px, PR1, normal, $tt-cl, uppercase);
+                            }
+                            p{
+                                display: flex;
+                                @include text($fz-main, PR2, 30px, $black-cl, none);
+                                a{
+                                    margin-left: 2px;
+                                }
+                            }
+                            .de-co{
+                                ul{
+                                    padding-left: 10px;
+                                    li{
+                                        text-align: justify;
+                                        display: flex;
+                                        @include text($fz-main, PR2, 30px, $black-cl, none);
+                                        img{
+                                            margin-top: 3px;
+                                            margin-left: 0;
+                                            margin-right: 5px;
+                                            width: 15px;
+                                            height: auto;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @include desktop{
+            .container{
+                .left{
+                    margin-top: 300px;
+                    .certificate{
+                        &__content{
+                            p{
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                    .interest{
+                        &__content{
+                            .hobby{
+                                p{
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+                }
+                .right{
+                    .background{
+                        img{
+                            width: 300px;
+                            left: -330px;
+                            top: -40px;
+                        }
+                    }
+                    .name-pos{
+                        margin-top: 40px;
+                        margin-bottom: 20px;
+                        .name{
+                            h2{
+                                font-size: 50px;
+                            }
+    
+                        }
+                    }
+
+                    .information{
+                        margin-bottom: 20px;
+                        .contact{
+                            li{
+                                p{
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+
+                    .about{
+                        margin-bottom: 10px;
+                        &__title{
+                            margin-bottom: 15px;
+                        }
+                        &__content{
+                            ul{
+                                li{
+                                    p{
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .education{
+                        &__title{
+                            margin-bottom: 10px;
+                        }
+                        &__content{
+                            .school{
+                                p{
+                                    font-size: 14px;
+                                }
+                            }
+                        }
+                    }
+
+                    .experience{
+                        &__title{
+                            margin-bottom: 10px;
+                        }
+                        &__content{
+                            &--left{
+                                p{
+                                    font-size: 14px;
+                                }
+                                .content{
+                                    ul{
+                                        li{
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                            .image{
+                                @include midflex();
+                            }
+                            &--right{
+                                border-radius: 10px;
+                                height: 75%;
+                                overflow: hidden;
+                                img{
+                                    border-radius: 10px;
+                                }
+                            }
+                        }
+                    }
+                    
+                    .activity{
+                        &__title{
+                            margin-bottom: 15px;
+                        }
+                        &__content{
+                            .detail{
+                                p{
+                                    font-size: 14px;
+                                }
+                                .de-co{
+                                    ul{
+                                        li{
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @include tablet{
+            .container{
+                .left{
+                    margin-top: 220px;
+                    .skill{
+                        &__title{
+                            h2{
+                                padding-left: 0;
+                            }
+                        }
+                        &__content{
+                            grid-template-columns: repeat(2, 1fr);
+                            .pic-html{
+                                grid-column-start: 1;
+                                grid-column-end: 2;
+                                grid-row-start: 1;
+                                grid-row-end: 2;
+                                overflow: hidden;
+                                background: $white-cl;
+                                border-radius: 10px;
+                                @include midflex();
+                                img{
+                                    max-width: 100%;
+                                    width: 60px;
+                                    height: auto;
+                                }
+                            }
+                            .pic-css{
+                                grid-column-start: 2;
+                                grid-column-end: 3;
+                                grid-row-start: 1;
+                                grid-row-end: 2;
+                                overflow: hidden;
+                                background: $white-cl;
+                                border-radius: 10px;
+                                @include midflex();
+                                img{
+                                    max-width: 100%;
+                                    width: 45px;
+                                    height: auto;
+                                }
+                            }
+                            .pic-js{
+                                grid-column-start: 1;
+                                grid-column-end: 2;
+                                grid-row-start: 2;
+                                grid-row-end: 3;
+                                overflow: hidden;
+                                background: $white-cl;
+                                border-radius: 10px;
+                                @include midflex();
+                                img{
+                                    max-width: 100%;
+                                    width: 45px;
+                                    height: auto;
+                                }
+                            }
+                            .pic-jquery{
+                                grid-column-start: 2;
+                                grid-column-end: 3;
+                                grid-row-start: 2;
+                                grid-row-end: 3;
+                                overflow: hidden;
+                                background: $white-cl;
+                                border-radius: 10px;
+                                @include midflex();
+                                img{
+                                    max-width: 100%;
+                                    width: 60px;
+                                    height: auto;
+                                }
+                            }
+                            .pic-bs{
+                                grid-column-start: 1;
+                                grid-column-end: 2;
+                                grid-row-start: 3;
+                                grid-row-end: 4;
+                                overflow: hidden;
+                                background: $white-cl;
+                                border-radius: 10px;
+                                @include midflex();
+                                img{
+                                    max-width: 100%;
+                                    width: 65px;
+                                    height: auto;
+                                }
+                            }
+                            .pic-pts{
+                                grid-column-start: 2;
+                                grid-column-end: 3;
+                                grid-row-start: 3;
+                                grid-row-end: 4;
+                                overflow: hidden;
+                                background: $white-cl;
+                                border-radius: 10px;
+                                @include midflex();
+                                img{
+                                    max-width: 100%;
+                                    width: 65px;
+                                    height: auto;
+                                }
+                            }
+                        }
+                    }
+
+                    .project{
+                        &__title{
+                            h2{
+                                padding-left: 0;
+                            }
+                        }
+                        &__content{
+                            .gpl{
+                                .de{
+                                    display: flex;
+                                    flex-direction: column-reverse;
+                                    &--img{
+                                        max-width: 100%;
+                                    }
+                                    &--co{
+                                        max-width: 100%;
+                                        @include midflex();
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .interest{
+                        &__title{
+                            h2{
+                                padding-left: 0;
+                            }
+                        }
+                        &__content{
+                            padding-left: 20px;
+                            .hobby{
+                                .image{
+                                    img{
+                                        width: 25px;
+                                    }
+                                }
+                                p{
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                    .certificate{
+                        &__title{
+                            h2{
+                                padding-left: 0;
+                            }
+                        }
+                    }
+                }
+                .right{
+                    .background{
+                        img{
+                            width: 220px;
+                            left: -250px;
+                            top: -30px;
+                        }
+                    }
+                    .name-pos{
+                        margin-top: 30px;
+                        .name{
+                            margin-bottom: 10px;
+                            h2{
+                                font-size: 35px;
+                            }
+                        }
+                        .position{
+                            h3{
+                                font-size: 20px;
+                            }
+                        }
+                        &:after{
+                            margin-top: 20px;
+                        }
+                    } 
+
+                    .information{
+                        .contact{
+                            margin-left: 20px;
+                        }
+                    }
+
+                    .about{
+                        &__content{
+                            padding-left: 20px;
+                        }
+                    }
+
+                    .education{
+                        &__content{
+                            padding-left: 20px;
+                            .school{
+                                h4{
+                                    font-size: 17px;
+                                }
+                                &:before{
+                                    left: -10px;
+                                }
+                            }
+                        }
+                    }
+
+                    .experience{
+                        &__content{
+                            padding-left: 20px;
+                            .detail{
+                                display: flex;
+                                flex-direction: column;
+                                &__left{
+                                    max-width: 100%;
+                                }
+                                .image{
+                                    max-width: 100%;
+                                }
+                            }
+                        }
+                    }
+
+                    .activity{
+                        &__content{
+                            padding-left: 20px;
+                            .co{
+                                display: flex;
+                                flex-direction: column;
+                                &__co{
+                                    max-width: 100%;
+                                }
+                            }
+                            .detail{
+                                margin-bottom: 10px;
+                                h5{
+                                    font-size: 17px;
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        }
+
+        @include mobile{
+            .container{
+                .plus{
+                    display: flex;
+                    flex-direction: column-reverse;
+                }
+                .left{
+                    margin-top: -20px;
+                    padding-top: 0;
+                    background: $white-cl;
+                    .skill{
+                        &__title{
+                            h2{
+                                padding-left: 5px;
+                            }
+                        }
+                        &__content{
+                            .pic-html, .pic-css, .pic-js, .pic-jquery, .pic-bs, .pic-pts{
+                                background: $bgl-cl;
+                            }
+                        }
+                    }
+
+                    .project{
+                        &__title{
+                            h2{
+                                padding-left: 5px;
+                            }
+                        }
+                        &__content{
+                            .gpl{
+                                &__img{
+                                    height: 200px;
+                                }
+                            }
+                        }
+                    }
+
+                    .interest{
+                        &__title{
+                            h2{
+                                padding-left: 5px;
+                            }
+                        }
+                    }
+                }
+                .right{
+                    padding: 0 15px;
+                    .background{
+                        img{
+                            width: 200px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            border-radius: 50%;
+                            top: -220px;
+                        }
+                    }
+
+                    .name-pos{
+                        margin-top: 250px;
+                        .name{
+                            h2{
+                                font-size: 25px;
+                            }
+                        }
+                        .position{
+                            h3{
+                                font-size: 15px;
+                            }
+                        }
+
+                    }
+
+                    .education{
+                        &__title{
+                            margin-bottom: 20px;
+                        }
+                        .school{
+                            h4{
+                                font-size: 15px;
+                            }
+                            &:before{
+                                width: 0;
+                            }
+                        }
+                    }
+
+                    .experience{
+                        &__title{
+                            margin-bottom: 20px;
+                        }
+                        &__content{
+                            &--left{
+                                h5{
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+
+                    .activity{
+                        &__title{
+                            margin-bottom: 20px;
+                        }
+                        &__content{
+                            .detail{
+                                h5{
+                                    font-size: 15px;
+                                }
+                            }
+                            .co__co{
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }  
+}

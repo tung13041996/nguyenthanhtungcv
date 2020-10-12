@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'PR1';
+    src: url(/font/ProximaNova-Bold.woff) format('woff2'),
+        url(/font/ProximaNova-Bold.woff2) format('woff');
+    display: fallback;
+}
+
+@font-face {
+    font-family: 'PR2';
+    src: url(/font/ProximaNova-Regular.woff) format('woff2'),
+        url(/font/ProximaNova-Regular.woff2) format('woff');
+    display: fallback;
+}
+
+
+@font-face {
+    font-family: 'TT';
+    src: url(/font/MyriadPro-Black.woff2) format('woff2'),
+        url(/font/MyriadPro-Black.woff) format('woff');
+        font-display: fallback;
+}
+
+@font-face {
+    font-family: 'CT';
+    src: url(/font/MyriadPro-Light.woff2) format('woff2'),
+        url(/font/MyriadPro-Light.woff) format('woff');
+        font-display: fallback;
+}
